@@ -1,6 +1,6 @@
-// ProductCard.tsx
+
 import React from "react";
-import { Product } from "../components/ProductList"; // Make sure Product type is available
+import { Product } from "../contexts/CartContext"; // confirm Product type in CartContext
 import styled from "styled-components";
 import { useCart } from "../contexts/CartContext";
 

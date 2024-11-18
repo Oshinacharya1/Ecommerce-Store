@@ -1,7 +1,7 @@
 import React, { createContext, useState, ReactNode, useContext } from "react";
 
-// Define a type for Product
-interface Product {
+// Defining a type for Product
+export interface Product {
   id: number;
   title: string;
   price: number;
@@ -9,7 +9,7 @@ interface Product {
   quantity?: number; // Optional quantity field for tracking items
 }
 
-// Define a type for CartContext
+// Defining a type for CartContext
 interface CartContextType {
   cart: Product[];
   addToCart: (product: Product) => void;
