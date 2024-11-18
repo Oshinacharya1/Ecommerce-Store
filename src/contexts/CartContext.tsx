@@ -9,7 +9,7 @@ export interface Product {
   quantity?: number; // Optional quantity field for tracking items
 }
 
-// Used to holds the cart's state and provides function to manipulate it
+// Interface CartContextType is Used to holds the cart's state and provides function to manipulate it
 interface CartContextType {
   cart: Product[];
   addToCart: (product: Product) => void;
