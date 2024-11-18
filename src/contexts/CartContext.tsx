@@ -9,7 +9,7 @@ export interface Product {
   quantity?: number; // Optional quantity field for tracking items
 }
 
-// Defining a type for CartContext
+// Used to holds the cart's state and provides function to manipulate it
 interface CartContextType {
   cart: Product[];
   addToCart: (product: Product) => void;
@@ -25,10 +25,11 @@ interface CartProviderProps {
   children: ReactNode;
 }
 
-// Create a provider component to wrap around your app
+//  Implemented provider component to wrap around your app give all components access to the cart and its functions via CartContext.
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
-  const [cart, setCart] = useState<Product[]>([]);
+  const [cart, setCart] = useState<Product[]>([]); //useState hook to manage cart because it holds an array of product objects
 
+  // Implemented cart management function to addToCart, updateQuantity, removeFromCart, and clearCart
   const addToCart = (product: Product) => {
     const existingItem = cart.find((item) => item.id === product.id);
     if (existingItem) {

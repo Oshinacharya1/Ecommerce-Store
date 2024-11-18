@@ -30,7 +30,7 @@ const TotalPrice = styled.div`
 const Checkout: React.FC = () => {
   const { cart, clearCart } = useCart();
 
-  // Calculate the total price
+  // to calculate the total price of all items in the cart array by using the reduce method, initial value of an array is 0
   const total = cart.reduce((sum, product) => sum + product.price, 0);
 
   // Handle order placement
