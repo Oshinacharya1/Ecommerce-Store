@@ -2,6 +2,7 @@ import React from "react";
 import { useProducts } from "../hooks/useProducts";
 import styled from "styled-components";
 import ProductCard from "./ProductCard";
+import { Product } from "../contexts/CartContext";
 
 const ProductContainer = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ const ProductList: React.FC = () => {
 
   return (
     <ProductContainer>
-      {data?.map((product: { id: number }) => (
+      {data?.map((product: Product) => (
         <ProductCard key={product.id} product={product} />
       ))}
     </ProductContainer>
