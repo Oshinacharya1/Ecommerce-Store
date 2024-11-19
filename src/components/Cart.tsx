@@ -4,7 +4,7 @@ import { useCart } from "../contexts/CartContext";
 
 const CartContainer = styled.div`
   padding: 20px;
-  max-width: 800px;
+  max-width: 990px;
   margin: 0 auto;
   background-color: #f9f9f9;
   border-radius: 10px;
@@ -34,7 +34,7 @@ const ItemDetails = styled.div`
 
     &:first-child {
       font-weight: bold;
-      font-size: 18px;
+      font-size: 15px;
     }
   }
 `;
