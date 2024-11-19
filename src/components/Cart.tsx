@@ -4,7 +4,7 @@ import { useCart } from "../contexts/CartContext";
 
 const CartContainer = styled.div`
   padding: 20px;
-  max-width: 990px;
+  max-width: 1010px;
   margin: 0 auto;
   background-color: #f9f9f9;
   border-radius: 10px;
